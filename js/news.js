@@ -24,23 +24,21 @@ const displayMainCategory = category => {
   });
 };
 
-const loadCategoryDetail = id => {
+const loadCategoryDetail = newsContainerText => {
   // https://openapi.programming-hero.com/api/news/category/01
-  const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
+  const url = `https://openapi.programming-hero.com/api/news/category/${newsContainerText}`;
   //   console.log("Love", id);
   fetch(url)
     .then(res => res.json())
-    .then(data => displaySelectedCategory(data.data[0]));
+    .then(data => console.log(data.data[0]));
   //   console.log(url);
 };
-
-const displaySelectedCategory = select => {
-  const catagoryContainer = document.getElementById("catagory-container");
-  catagoryContainer.innerHTML = `
-  
-    `;
-
-  console.log(select);
-};
+document
+  .getElementById("catagory-container")
+  .addEventListener("click", function () {
+    const newsContainer = document.getElementById("news-container");
+    const newsContainerText = newsContainer.innerText;
+    // loadMainApi();
+  });
 
 loadMainApi();
