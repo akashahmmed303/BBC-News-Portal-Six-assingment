@@ -45,7 +45,7 @@ document
   .addEventListener("click", function () {
     const newsContainer = document.getElementById("news-container");
     const newsContainerText = newsContainer.innerText;
-    console.log(newsContainerText);
+
     // loadMainApi();
   });
 
