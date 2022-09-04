@@ -5,7 +5,7 @@ const loadMainApi = () => {
     .then(data => displayMainCategory(data.data.news_category));
 };
 const displayMainCategory = category => {
-  //   console.log(category);
+  // console.log(category);
   const categoryContainer = document.getElementById("catagory-container");
   category.forEach(singleCategory => {
     // console.log(singleCategory);

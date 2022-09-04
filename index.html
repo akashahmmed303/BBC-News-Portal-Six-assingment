@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBC News Today</title>
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/8fa3ce78b4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap link  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,8 +21,7 @@
   </head>
   <body class="container bg-light">
     <header>
-      <!-- navbar  -->
-
+      <!-- header  -->
       <nav class="navbar navbar-expand-lg mt-3">
         <div class="container">
           <a class="navbar-brand" href="#"
@@ -46,13 +52,30 @@
       </nav>
     </header>
     <hr />
-
+    <!-- navbar  -->
     <main>
       <section>
         <div
           id="catagory-container"
           class="d-flex justify-content-center flex-column flex-md-row"
         ></div>
+      </section>
+
+      <!-- news count  -->
+      <section>
+        <div
+          class="bg-white rounded-3 p-3 border-success p-2 border-opacity-10"
+        >
+          <h5>
+            <span id="news-count">8</span>
+            "items found for the category"
+            <span id="category-name"></span>
+          </h5>
+        </div>
+      </section>
+      <!-- news container  -->
+      <section class="my-5 rounded-3 p-4">
+        <div class="mb-3 p-4" id="news-container"></div>
       </section>
     </main>
 
@@ -61,6 +84,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="js/showNews.js"></script>
     <script src="js/news.js"></script>
   </body>
 </html>
