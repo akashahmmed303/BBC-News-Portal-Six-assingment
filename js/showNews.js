@@ -27,9 +27,30 @@ const displayNewsContainer = news => {
             : news.details
         }
       </p>
-      <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </p>
+      <div class="row d-flex">
+        <div class="col-lg-4 d-flex"> <img class="w-25 rounded-circle me-3" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&amp;w=1000&amp;q=80" alt>
+            <div>
+                <h6>${news.author.name}</h6>
+                <p>${news.author.published_date} </p>
+            </div>
+        </div>
+        <div class="col-lg-3 d-flex">
+            <h5 class=" me-1 class= &quot;py-2&quot;"><i class="fa-regular fa-eye"></i></h5>
+            <h5>${news.total_view} M</h5>
+        </div>
+        <div class="col-lg-3 d-flex">
+                    <h5><i class="fa-solid fa-star"></i></h5>
+                    <h5><i class="fa-solid fa-star"></i></h5>
+                    <h5><i class="fa-solid fa-star"></i></h5>
+                    <h5><i class="fa-regular fa-star"></i></h5>
+                    <h5><i class="fa-regular fa-star"></i></h5>
+        
+        </div>
+        <div class="col-lg-2">
+                <button type="button" onclick="viewClickDetails('11468ed61aee84de492a8b04158a22f0')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 Show Details</button>
+        </div>
+      </div>
     </div>
   </div>     
   </div>

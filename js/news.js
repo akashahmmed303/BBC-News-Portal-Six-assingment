@@ -16,7 +16,7 @@ const displayMainCategory = category => {
    
     <nav class="navbar">
          <div class="container-fluid">
-            <a class="navbar-brand text-muted fs-6" href="#">${category_name}</a>
+            <a class="navbar-brand text-muted fs-5 fw-semibold" href="#">${category_name}</a>
         </div>
     </nav>
       `;
