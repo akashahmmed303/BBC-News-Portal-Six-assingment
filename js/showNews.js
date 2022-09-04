@@ -6,7 +6,7 @@ const loadNewsContainer = async () => {
 };
 
 const displayNewsContainer = news => {
-  //   console.log(news);
+  // console.log(news);
   const newsContainer = document.getElementById("news-container");
   newsContainer.textContent = "";
   news.forEach(news => {
@@ -48,7 +48,7 @@ const displayNewsContainer = news => {
         
         </div>
         <div class="col-lg-2">
-                <button type="button" onclick="viewClickDetails('11468ed61aee84de492a8b04158a22f0')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" onclick="loadModalDetail()"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                  Show Details</button>
         </div>
       </div>
@@ -58,6 +58,32 @@ const displayNewsContainer = news => {
       `;
     newsContainer.appendChild(loadNewsDiv);
   });
+};
+
+const loadModalDetail = async () => {
+  const url = `https://openapi.programming-hero.com/api/news/category/01`;
+  const res = await fetch(url);
+  const data = await res.json();
+  displayModalDetail(data.data[0]);
+};
+
+const displayModalDetail = modal => {
+  console.log(modal);
+  const modalTitle = document.getElementById("exampleModalLabel");
+  modalTitle.innerText = modal.category_id;
+  const modalDetails = document.getElementById("modal-details");
+  modalDetails.innerHTML = `
+  <h3>Title: ${modal.title} </h3>
+  <p class="my-5"> Details:${modal.details} </p>
+  <div > 
+  <p> Badge:${modal.rating.badge}</p>
+  <p> Rating:${modal.rating.number}</p>
+  </div>
+
+  
+
+  
+  `;
 };
 
 loadNewsContainer();
