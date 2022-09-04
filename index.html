@@ -59,6 +59,10 @@
           id="catagory-container"
           class="d-flex justify-content-center flex-column flex-md-row"
         ></div>
+
+        <div id="no-found-message" class="mt-4 d-none">
+          <h3 class="text-warning">Not Found. Please try a new search</h3>
+        </div>
       </section>
 
       <!-- news count  -->
@@ -71,6 +75,13 @@
             "items found for the category"
             <span id="category-name"></span>
           </h5>
+        </div>
+      </section>
+      <section>
+        <div class="d-flex justify-content-center align-item-center mt-5">
+          <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </section>
       <!-- news container  -->

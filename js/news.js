@@ -7,6 +7,13 @@ const loadMainApi = () => {
 const displayMainCategory = category => {
   // console.log(category);
   const categoryContainer = document.getElementById("catagory-container");
+
+  const noNews = document.getElementById("no-found-message");
+  if (category.length === 0) {
+    noNews.classList.remove("d-none");
+  } else {
+    noNews.classList.add("d-none");
+  }
   category.forEach(singleCategory => {
     // console.log(singleCategory);
     const { category_name, category_id } = singleCategory;
