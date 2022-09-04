@@ -6,8 +6,9 @@ const loadNewsContainer = async () => {
 };
 
 const displayNewsContainer = news => {
-  console.log(news);
+  //   console.log(news);
   const newsContainer = document.getElementById("news-container");
+  newsContainer.textContent = "";
   news.forEach(news => {
     const loadNewsDiv = document.createElement("div");
     loadNewsDiv.classList.add("row");
