@@ -6,7 +6,7 @@ const loadNewsContainer = async () => {
 };
 
 const displayNewsContainer = news => {
-  console.log(news[0]);
+  console.log(news);
   const newsContainer = document.getElementById("news-container");
   news.forEach(news => {
     const loadNewsDiv = document.createElement("div");
@@ -21,7 +21,11 @@ const displayNewsContainer = news => {
     <div class="card-body ">
       <h3 class="card-title fw-bold my-3">${news.title}</h3>
       <p class="card-text my-4">
-        ${news.details}
+        ${
+          news.details.length > 100
+            ? news.details.slice(0, 300) + "..."
+            : news.details
+        }
       </p>
       <p class="card-text">
         <small class="text-muted">Last updated 3 mins ago</small>
