@@ -8,13 +8,6 @@ const displayMainCategory = category => {
   // console.log(category);
   const categoryContainer = document.getElementById("catagory-container");
 
-  // const noNews = document.getElementById("no-found-message");
-  // if (category.length === 0) {
-  //   noNews.classList.remove("d-none");
-  // } else {
-  //   noNews.classList.add("d-none");
-  // }
-
   category.forEach(singleCategory => {
     // console.log(singleCategory);
     const { category_name, category_id } = singleCategory;
@@ -43,20 +36,11 @@ const loadCategoryDetail = newsContainerText => {
 };
 document
   .getElementById("catagory-container")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (go) {
     const newsContainer = document.getElementById("news-container");
-    const newsContainerText = newsContainer.innerText;
+    // newsContainer.innerText = ;
 
     // loadMainApi();
   });
-
-// const toggleSpinner = isLoading => {
-//   const loaderSection = document.getElementById("loader");
-//   if (isLoading) {
-//     loaderSection.classList.remove("d-none");
-//   } else {
-//     loaderSection.classLista.add("d-none");
-//   }
-// };
 
 loadMainApi();
