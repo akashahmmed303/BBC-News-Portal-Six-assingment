@@ -45,7 +45,17 @@ document
   .addEventListener("click", function () {
     const newsContainer = document.getElementById("news-container");
     const newsContainerText = newsContainer.innerText;
+    console.log(newsContainerText);
     // loadMainApi();
   });
+
+const toggleSpinner = isLoading => {
+  const loaderSection = document.getElementById("loader");
+  if (isLoading) {
+    loaderSection.classList.remove("d-none");
+  } else {
+    loaderSection.classLista.add("d-none");
+  }
+};
 
 loadMainApi();
